@@ -29,8 +29,17 @@ body {
 }
 
 .title {
-  padding: 1rem;
+  cursor: crosshair;
+  margin: 1rem;
   font-size: 4rem;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+.title:hover {
+  color: var(--blue);
+  letter-spacing: 0.1rem;
+  font-size: 4.5rem;
 }
 
 .btn {
@@ -52,13 +61,22 @@ body {
   background-color: var(--blue);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .rules-container {
-  padding: 10px 0;
-  margin: auto;
-  border-radius: 15px;
-  border: 5px solid var(--yellow);
-  background-color: var(--white);
-  color: var(--very-dark-blue);
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  border: 0.25rem solid var(--blue);
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 0.5s ease;
 }
 
 .rules-container ul {
@@ -66,7 +84,7 @@ body {
 }
 
 .rules-container p {
-  margin: 10px 0;
+  margin: 0.25rem 0;
 }
 
 @media (min-width: 760px) {
@@ -76,19 +94,30 @@ body {
 }
 
 .score-container {
+  cursor: none;
+  text-transform: uppercase;
   display: flex;
-  justify-content: space-around;
-  margin: 30px 0;
-  font-size: 1.2rem;
+  justify-content: space-between;
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+.score-container span,
+strong {
+  margin: 0.5rem;
 }
 
 .score {
   font-weight: 500;
 }
 
+.subtitle {
+  font-size: 2rem;
+  font-style: italic;
+}
+
 .results-container {
-  font-size: 1.3rem;
-  margin: 15px 0;
+  font-size: 1.25rem;
 }
 
 #winner-msg {
@@ -97,5 +126,10 @@ body {
 
 #reset-game-btn {
   display: none;
-  margin: 20px auto;
+  font-family: "DM Serif Display", serif;
+  color: var(--dark);
+  min-width: 500px;
+  min-height: 100px;
+  font-size: 2rem;
+  padding: 1rem 2rem;
 }
