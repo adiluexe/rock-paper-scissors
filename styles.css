@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&display=swap");
+
 *,
 *::before,
 *::after {
@@ -7,35 +9,47 @@
 }
 
 :root {
-  --very-dark-blue: #0a0a23;
-  --white: #ffffff;
-  --yellow: #f1be32;
-  --golden-yellow: #feac32;
+  --blue: #3fc1c9;
+  --pink: #fc5185;
+  --light: #f5f5f5;
+  --dark: #364f6b;
 }
 
 body {
-  background-color: var(--very-dark-blue);
+  min-height: 100vh;
+  font-family: "DM Serif Display", serif;
+  background-color: var(--pink);
+  color: var(--light);
   text-align: center;
-  color: var(--white);
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  margin: 15px 0 20px;
+.title {
+  padding: 1rem;
+  font-size: 4rem;
 }
 
 .btn {
   cursor: pointer;
-  width: 100px;
-  margin: 10px;
-  color: var(--very-dark-blue);
-  background-color: var(--golden-yellow);
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border-color: var(--golden-yellow);
-  border-width: 3px;
+  outline: none;
+  margin: 1rem;
+  padding: 1rem;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 3rem;
+  font-size: 4rem;
+  border: 0.25rem solid var(--blue);
+  background-color: var(--light);
+  transition: 0.5s ease;
 }
 
 .btn:hover {
-  background-image: linear-gradient(#ffcc4c, #f89808);
+  font-size: 6rem;
+  background-color: var(--blue);
 }
 
 .rules-container {
